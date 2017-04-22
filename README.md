@@ -4,7 +4,7 @@ Community sharing and management at Omega Works
 # Development
 `yarn` or `npm i`
 
-`yarn watch` or `npm run watch'
+`yarn watch` or `npm run watch`
 
 `yarn dev` or `npm run dev`
 
@@ -12,7 +12,7 @@ Community sharing and management at Omega Works
 # Production
 `yarn` or `npm i`
 
-`yarn build` or `npm run build'
+`yarn build` or `npm run build`
 
 `yarn start` or `npm start`
 
