@@ -15,11 +15,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andreacaldera/template/redux-template"
+    "url": "git+https://github.com/andreacaldera/omega-works"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/andreacaldera/template/issues"
+    "url": "https://github.com/andreacaldera/omega-works/issues"
   },
   "homepage": "http://acal-software.com/",
   "dependencies": {

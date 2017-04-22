@@ -1,1 +1,1 @@
-export const NAMESPACE = 'REDUX_TEMPLATE';
+export const NAMESPACE = 'OMEGA-WORKS';
