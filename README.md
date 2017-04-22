@@ -1,5 +1,5 @@
 # Omega Works
-Community sharing and management at Omega Works
+Community sharing and self-=management at Omega Works
 
 # Development
 `yarn` or `npm i`
