@@ -2,18 +2,18 @@
 Community sharing and management at Omega Works
 
 # Development
-## Yarn (recommended)
-`yarn`
+`yarn` or `npm i`
 
-`yarn dev`
+`yarn watch` or `npm run watch'
 
-`yarn watch`
+`yarn dev` or `npm run dev`
 
 
-## NPM
-`npm i`
+# Production
+`yarn` or `npm i`
 
-`npm run dev`
+`yarn build` or `npm run build'
 
-`run run watch`
+`yarn start` or `npm start`
+
 
