@@ -16,4 +16,9 @@ Community sharing and self-management at Omega Works
 
 `yarn start` or `npm start`
 
+## Docker
+`docker build . -t omegaworks.-VERSION`
 
+`docker run -p 3001:3001 omegaworks.-VERSION` 
+
+Make sure to change VERSION and port mapping.
