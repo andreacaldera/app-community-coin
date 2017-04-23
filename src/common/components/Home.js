@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const Home = () =>
 (<div>
-  <h2>Welcome to Omega Works!</h2>
+  <h2>Welcome to Community Coin!</h2>
 </div>);
 
 Home.propTypes = {

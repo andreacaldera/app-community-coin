@@ -1,1 +1,1 @@
-export const NAMESPACE = 'OMEGA-WORKS';
+export const NAMESPACE = 'APP-COMMUNITY_COIN';

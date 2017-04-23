@@ -1,9 +1,9 @@
-import fetch from 'isomorphic-fetch';
-import meta from '../modules/meta';
+// import fetch from 'isomorphic-fetch';
+// import meta from '../modules/meta';
 
-module.exports = (store) => (next) => (action) => Promise.resolve()
+module.exports = (/* store */) => (next) => (action) => Promise.resolve()
     .then(() => {
-      const state = store.getState();
+      // const state = store.getState();
 
       switch (action.type) {
         // case START: {

@@ -1,5 +1,5 @@
-# Omega Works
-Community sharing and self-management at Omega Works
+# Community Coin
+An attempt at building a resource-sharing network in a block of flats at Omega Works (Hackney Wick, London).
 
 # Development
 `yarn` or `npm i`
@@ -17,8 +17,8 @@ Community sharing and self-management at Omega Works
 `yarn start` or `npm start`
 
 ## Docker
-`docker build . -t omegaworks.-VERSION`
+`docker build . -t app-community-coin-VERSION`
 
-`docker run -p 3001:3001 omegaworks.-VERSION` 
+`docker run -p 3001:3001 app-community-coin-VERSION` 
 
 Make sure to change VERSION and port mapping.

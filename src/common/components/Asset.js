@@ -7,11 +7,19 @@ import assetModule from '../modules/asset';
 const Asset = ({ asset, expanded, toggleAssetDetails }) => (
   <div className="asset">
     <a href="/todo-asset-page" className="row asset__header" onClick={(e) => toggleAssetDetails(e, asset.id)}>
-      <div className="col"><img className="asset__image" alt={asset.name} src={asset.image} /></div>
-      <div className="col-10">{asset.name}</div>
+      <div className="col"><img className="asset__header__image" alt={asset.title} src={asset.image[0]} /></div>
+      <div className="col-10">{asset.title}</div>
       <div className="col"><img className="asset__user-avatar" alt={asset.user.name} src={asset.user.avatar} /></div>
     </a>
-    <div className={`asset__details ${(expanded ? '' : 'sr-only')}`}>{asset.description}</div>
+    <div className={`asset__details ${(expanded ? '' : 'sr-only')}`}>
+
+      <div className="row">
+        <div className="col">{asset.description}</div>
+        <div className="col">
+          ({asset.image.map((assetImage) => (<img className="asset__details__image" alt={asset.title} src={assetImage} />))})
+        </div>
+      </div>
+    </div>
   </div>
 );
 

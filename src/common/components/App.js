@@ -8,7 +8,7 @@ const App = ({ children }) => (
       <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon" />
       </button>
-      <Link className="navbar-brand" to="/">Omega Works</Link>
+      <Link className="navbar-brand" to="/">Community Coin</Link>
 
       <div className="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul className="navbar-nav mr-auto">

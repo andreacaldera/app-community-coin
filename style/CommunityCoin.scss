@@ -12,11 +12,6 @@ body {
     height: 50px;
   }
 
-  .asset__image {
-    width: 50px;
-    height: 50px;
-  }
-
   .asset__header {
     color: #026756;
     text-decoration: none;
@@ -26,9 +21,22 @@ body {
     -moz-border-radius: 6px;
     border-radius: 6px;
     padding: 10px;
+
+    .asset__header__image {
+      image-orientation: from-image;
+      width: 50px;
+      height: 50px;
+    }
   }
   .asset__details {
+    padding: 10px;
     background-color: #67C3B4;
     color: #026756;
+
+    .asset__details__image {
+      max-width: 500px;
+      max-height: 500px;
+      margin-bottom: 5px;
+    }
   }
 }

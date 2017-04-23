@@ -1,7 +1,7 @@
 {
-  "name": "omega-works",
+  "name": "app-community-coin",
   "version": "0.0.0",
-  "description": "Omega Works",
+  "description": "Community coin web application",
   "scripts": {
     "start": "node src/server/index.js",
     "dev": "nodemon src/server/index.js",
@@ -15,11 +15,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andreacaldera/omega-works"
+    "url": "git+https://github.com/andreacaldera/app-community-coin"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/andreacaldera/omega-works/issues"
+    "url": "https://github.com/andreacaldera/app-community-coin/issues"
   },
   "homepage": "http://acal-software.com/",
   "dependencies": {
