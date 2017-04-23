@@ -14,7 +14,7 @@ import routes from '../common/routes';
 import { NAMESPACE } from '../common/modules/constants';
 
 const app = Express();
-const port = 3001;
+const port = process.env.PORT || 3001;
 
 app.use(cookieParser());
 app.use('/dist', Express.static(path.join(__dirname, '../../dist')));

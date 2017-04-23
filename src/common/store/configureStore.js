@@ -14,7 +14,7 @@ const configureStore = (history, initialState) => {
       applyMiddleware(
         routerMiddleware(history),
         thunk,
-        createLogger,
+        createLogger, // TODO process.env.NODE_ENV === 'development'
         actionMiddleware,
       ),
     )
