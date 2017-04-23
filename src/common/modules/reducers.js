@@ -1,13 +1,13 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
 import meta from './meta';
-import timer from './timer';
+import asset from './asset';
 
 import { NAMESPACE } from './constants';
 
 const rootReducer = combineReducers({
   meta,
-  timer,
+  asset,
 });
 
 module.exports = combineReducers({ routing: routerReducer, [NAMESPACE]: rootReducer });

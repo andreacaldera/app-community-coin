@@ -1,14 +1,14 @@
 import Express from 'express';
 import cookieParser from 'cookie-parser';
 import path from 'path';
-import _ from 'lodash';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { Provider } from 'react-redux';
-import qs from 'qs';
 import { createMemoryHistory, match, RouterContext } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 
+import featureToggles from './middleware/feature-toggles';
+import asset from './middleware/asset';
 import configureStore from '../common/store/configureStore';
 import routes from '../common/routes';
 import { NAMESPACE } from '../common/modules/constants';
@@ -17,18 +17,11 @@ const app = Express();
 const port = 3001;
 
 app.use(cookieParser());
+app.use('/dist', Express.static(path.join(__dirname, '../../dist')));
+app.use('/images', Express.static(path.join(__dirname, '../../images')));
 
-const getActiveFeatureToggles = (req) => {
-  const params = qs.parse(req.query);
-  const activeFeatureToggles = (params['feature-toggles'] !== undefined ?
-    _.compact(params['feature-toggles']) :
-    req.cookies.featureToggles);
-  return activeFeatureToggles || [];
-};
-
-function renderFullPage(content, store) {
-  return `
-    <!doctype html>
+const renderFullPage = (content, store) =>
+  `<!doctype html>
     <html>
       <head>
         <link rel="stylesheet" type="text/css" href="http://localhost:3001/dist/omegaworks.css" />
@@ -43,33 +36,43 @@ function renderFullPage(content, store) {
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
         <script src="http://localhost:${port}/dist/omegaworks.js"></script>
       </body>
-    </html>
-    `;
-}
+    </html>`;
 
-app.use('/dist', Express.static(path.join(__dirname, '../../dist')));
+const getPreloadedState = (req, res, next) => {
+  // TODO review this callbacks hell
+  featureToggles(req, res, () =>
+    asset.getAssets(req, res, () => {
+      res.locals.preloadedState = {
+        [NAMESPACE]: {
+          meta: { featureToggles: res.locals.featureToggles },
+          asset: { all: res.locals.asset.all },
+        },
+      };
+      next();
+    })
+  );
+};
 
 app.use((req, res) => {
-  const activeFeatureToggles = getActiveFeatureToggles(req);
-  res.cookie('featureToggles', activeFeatureToggles);
-  const preloadedState = { [NAMESPACE]: { meta: { featureToggles: activeFeatureToggles } } };
-  const memoryHistory = createMemoryHistory(req.url);
-  const store = configureStore(memoryHistory, preloadedState);
-  const history = syncHistoryWithStore(memoryHistory, store);
+  getPreloadedState(req, res, () => {
+    const memoryHistory = createMemoryHistory(req.url);
+    const store = configureStore(memoryHistory, res.locals.preloadedState);
+    const history = syncHistoryWithStore(memoryHistory, store);
 
-  match({ history, routes, location: req.url }, (error, redirectLocation, renderProps) => {
-    if (error) {
-      res.status(500).send(error.message);
-    } else if (redirectLocation) {
-      res.redirect(302, redirectLocation.pathname + redirectLocation.search);
-    } else if (renderProps) {
-      const content = renderToString(
-        <Provider store={store}>
-          <RouterContext {...renderProps} />
-        </Provider>
-      );
-      res.send(renderFullPage(content, store));
-    }
+    match({ history, routes, location: req.url }, (error, redirectLocation, renderProps) => {
+      if (error) {
+        res.status(500).send(error.message);
+      } else if (redirectLocation) {
+        res.redirect(302, redirectLocation.pathname + redirectLocation.search);
+      } else if (renderProps) {
+        const content = renderToString(
+          <Provider store={store}>
+            <RouterContext {...renderProps} />
+          </Provider>
+        );
+        res.send(renderFullPage(content, store));
+      }
+    });
   });
 });
 

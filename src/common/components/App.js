@@ -16,20 +16,26 @@ const App = ({ children }) => (
             <Link className="nav-link" to="/">Home</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link disabled" href="/assets">Assets</a>
+            <a className="nav-link" href="/assets">Assets</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link disabled" href="/requests">Requests</a>
+            <a className="nav-link" href="/requests">Requests</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="/offers">Offers</a>
           </li>
           <li className="nav-item dropdown">
             <a className="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contribute</a>
             <div className="dropdown-menu" aria-labelledby="dropdown01">
-              <a className="dropdown-item" href="/add/asset">Add asset</a>
-              <a className="dropdown-item" href="/add/request">Request item or service</a>
+              <a className="dropdown-item disabled" href="/add/asset">Add asset</a>
+              <a className="dropdown-item disabled" href="/add/request">Request item or service</a>
             </div>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/about">About</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/contact-us">Contact us</Link>
           </li>
         </ul>
         <form className="form-inline my-2 my-lg-0">

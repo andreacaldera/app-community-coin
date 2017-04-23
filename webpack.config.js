@@ -2,7 +2,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: {
-    oemgaworks: ['./src/client/index.js', './style/OmegaWorks.scss'],
+    omegaworks: ['./src/client/index.js', './style/OmegaWorks.scss'],
   },
   output: {
     filename: 'dist/[name].js',
@@ -14,6 +14,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new ExtractTextPlugin({ filename: 'dist/oemgaworks.css', allChunks: true }),
+    new ExtractTextPlugin({ filename: 'dist/omegaworks.css', allChunks: true }),
   ],
 };

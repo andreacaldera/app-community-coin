@@ -2,19 +2,16 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import meta from '../modules/meta';
-
-const Home = ({ testMeta }) =>
+const Home = () =>
 (<div>
-  <h2>Home: {testMeta}</h2>
+  <h2>Welcome to Omega Works!</h2>
 </div>);
 
 Home.propTypes = {
   testMeta: PropTypes.string.isRequired,
 };
 
-const mapStateToProps = (state) => ({
-  testMeta: meta.getTestMeta(state),
+const mapStateToProps = (/* state */) => ({
 });
 
 const mapDispatchToProps = (/* dispatch */) => ({
