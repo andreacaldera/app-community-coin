@@ -1,26 +1,26 @@
 import { createSelector } from 'reselect';
 import _ from 'lodash';
 
-import { getRootSelector } from '../selectors';
-
-const getModuleSelector = createSelector(
-  getRootSelector,
-  ({ asset }) => asset
-);
+import { getAssetSelector, getSearchSelector } from '../selectors';
 
 const getAll = createSelector(
-  getModuleSelector,
+  getAssetSelector,
   ({ all }) => all
 );
 
 const getExpanded = createSelector(
-  getModuleSelector,
+  getAssetSelector,
   ({ expanded }) => expanded
 );
 
 const getList = createSelector(
-  getModuleSelector,
-  ({ all }) => _.values(all)
+  [getAssetSelector, getSearchSelector],
+  ({ all }, { searchTerm }) => {
+    const list = _.values(all);
+    return _.isEmpty(searchTerm) ?
+      list :
+      list.filter((asset) => asset.title.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1); // TODO build better and more performant search
+  }
 );
 
 module.exports = {

@@ -14,7 +14,8 @@
     "prepush": "yarn test"
   },
   "repository": {
-    "type": "git"
+    "type": "git",
+    "url": "git@github.com:andreacaldera/app-community-coin.git"
   },
   "license": "MIT",
   "bugs": {

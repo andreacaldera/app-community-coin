@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { Link } from 'react-router';
 
-const App = ({ children }) => (
+import search from '../modules/search';
+
+const App = ({ children, searchTerm, setSearchTerm }) => (
   <div>
     <nav className="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
       <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,8 +42,7 @@ const App = ({ children }) => (
           </li>
         </ul>
         <form className="form-inline my-2 my-lg-0">
-          <input className="form-control mr-sm-2" type="text" placeholder="Search" />
-          <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          <input className="form-control mr-sm-2" type="text" placeholder="Search" value={searchTerm} onChange={setSearchTerm} />
         </form>
       </div>
     </nav>
@@ -52,6 +54,18 @@ const App = ({ children }) => (
 
 App.propTypes = {
   children: PropTypes.shape().isRequired,
+  searchTerm: PropTypes.string.isRequired,
+  setSearchTerm: PropTypes.func.isRequired,
 };
 
-export default App;
+const mapStateToProps = (state) => ({
+  searchTerm: search.getSearchTerm(state),
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  setSearchTerm: (e) => {
+    dispatch(search.setSearchTerm(e.target.value));
+  },
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

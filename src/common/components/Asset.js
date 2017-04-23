@@ -16,7 +16,7 @@ const Asset = ({ asset, expanded, toggleAssetDetails }) => (
       <div className="row">
         <div className="col">{asset.description}</div>
         <div className="col">
-          ({asset.image.map((assetImage) => (<img className="asset__details__image" alt={asset.title} src={assetImage} />))})
+          ({asset.image.map((assetImage) => (<img key={assetImage} className="asset__details__image" alt={asset.title} src={assetImage} />))})
         </div>
       </div>
     </div>

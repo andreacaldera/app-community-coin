@@ -1,14 +1,9 @@
 import { createSelector } from 'reselect';
 
-import { getRootSelector } from '../selectors';
-
-const getModuleSelector = createSelector(
-  getRootSelector,
-  ({ meta }) => meta
-);
+import { getMetaSelector } from '../selectors';
 
 const getFeatureToggles = createSelector(
-  getModuleSelector,
+  getMetaSelector,
   ({ featureToggles }) => featureToggles
 );
 
