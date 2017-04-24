@@ -18,7 +18,7 @@ const Assets = ({ assets, expanded, searchTerm }) => {
     noAssetsMessage :
     (assets.map((_asset) => Asset({ key: _asset.title, asset: _asset, expanded: expanded.includes(_asset.id) })));
   return (
-    <div>
+    <div className="t-assets">
       <h2>Assets</h2>
       {assetElements}
     </div>

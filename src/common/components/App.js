@@ -38,7 +38,7 @@ const App = ({ children, searchTerm, setSearchTerm }) => (
             <Link className="nav-link" to="/about">About</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/contact-us">Contact us</Link>
+            <Link className="t-contact-us-link nav-link" to="/contact-us">Contact us</Link>
           </li>
         </ul>
         <form className="form-inline my-2 my-lg-0">

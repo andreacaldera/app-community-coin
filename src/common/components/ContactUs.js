@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 const ContactUs = () =>
-  (<div>
+  (<div className="t-contact-us">
     <h2>Contact us</h2>
     <p>Let us know your feedback and suggestions!</p>
     <ul>

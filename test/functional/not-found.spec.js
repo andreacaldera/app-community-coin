@@ -3,12 +3,11 @@ import '../../src/server';
 
 const browser = new Browser({ site: `http://localhost:${process.env.PORT}` });
 
-describe('Assets page', () => {
-  it('loads with assets', (done) =>
-    browser.visit('/assets', () => {
+describe('Not found page', () => {
+  it('is displayed for an invalid url', (done) =>
+    browser.visit('/i-dont-exist', () => {
       browser.assert.success();
-      browser.assert.status(200);
-      browser.assert.element('.t-assets');
+      browser.assert.element('.t-not-found');
       done();
     })
   );
