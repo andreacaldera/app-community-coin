@@ -7,17 +7,19 @@ import reducer from '../modules';
 import actionMiddleware from '../middleware';
 
 const configureStore = (history, initialState) => {
+  const middlewares = [
+    routerMiddleware(history),
+    thunk,
+    process.env.NODE_ENV === 'development' ? createLogger : null,
+    actionMiddleware,
+  ];
+
+  const middleware = applyMiddleware(...middlewares.filter(Boolean));
+
   const store = createStore(
     reducer,
     initialState,
-    compose(
-      applyMiddleware(
-        routerMiddleware(history),
-        thunk,
-        createLogger, // TODO process.env.NODE_ENV === 'development'
-        actionMiddleware,
-      ),
-    )
+    compose(middleware)
   );
 
   return store;

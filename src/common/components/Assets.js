@@ -16,7 +16,7 @@ const Assets = ({ assets, expanded, searchTerm }) => {
 
   const assetElements = _.isEmpty(assets) ?
     noAssetsMessage :
-    (assets.map((_asset) => Asset({ asset: _asset, expanded: expanded.includes(_asset.id) })));
+    (assets.map((_asset) => Asset({ key: _asset.title, asset: _asset, expanded: expanded.includes(_asset.id) })));
   return (
     <div>
       <h2>Assets</h2>
@@ -26,7 +26,7 @@ const Assets = ({ assets, expanded, searchTerm }) => {
 };
 
 Assets.propTypes = {
-  assets: PropTypes.arrayOf.isRequired,
+  assets: PropTypes.arrayOf(PropTypes.shape()).isRequired,
   expanded: PropTypes.arrayOf(PropTypes.number).isRequired,
   searchTerm: PropTypes.string.isRequired,
 };
