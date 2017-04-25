@@ -13,6 +13,10 @@ const App = ({ children, searchTerm, setSearchTerm }) => (
       </button>
       <Link className="navbar-brand" to="/">Community Coin</Link>
 
+      <form className="navbar__search-form-mobile pull-right form-inline my-2 my-lg-0" onSubmit={(e) => e.preventDefault()}>
+        <input className="form-control mr-sm-2" type="text" placeholder="Search" value={searchTerm} onChange={setSearchTerm} />
+      </form>
+
       <div className="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
@@ -41,7 +45,7 @@ const App = ({ children, searchTerm, setSearchTerm }) => (
             <Link className="t-contact-us-link nav-link" to="/contact-us">Contact us</Link>
           </li>
         </ul>
-        <form className="form-inline my-2 my-lg-0" onSubmit={(e) => e.preventDefault()}>
+        <form className="navbar__search-form orm-inline my-2 my-lg-0" onSubmit={(e) => e.preventDefault()}>
           <input className="form-control mr-sm-2" type="text" placeholder="Search" value={searchTerm} onChange={setSearchTerm} />
         </form>
       </div>

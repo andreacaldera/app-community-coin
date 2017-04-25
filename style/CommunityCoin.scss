@@ -34,15 +34,33 @@ body {
       color: green;
       font-size: 1em;
     }
+  }
 
+  .navbar__search-form {
+    display: none;
+
+    @media screen and (min-width: $break-large) {
+      display: block;
+    }
+  }
+  .navbar__search-form-mobile {
     .form-control {
-      font-size: 1em;
+      width: 100%;
+      font-size: 2rem;
+    }
+
+
+    @media screen and (min-width: $break-large) {
+      display: none;
     }
   }
 }
 
 .main {
+  padding-top: 30px;
+
   @media screen and (min-width: $break-large) {
+    padding-top: 0px;
     padding-left: 10%;
     padding-right: 10%;
   }
@@ -55,7 +73,6 @@ body {
   @media screen and (min-width: $break-large) {
     font-size: 15px;
   }
-
 
   .asset__user-avatar {
     max-width: 50px;
