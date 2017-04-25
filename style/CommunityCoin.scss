@@ -22,8 +22,13 @@ body {
     border-radius: 6px;
     padding: 10px;
 
+    .col {
+      padding: 0px;
+    }
+
     .asset__header__image {
-      image-orientation: from-image;
+      vertical-align: middle;
+      height: 100%;
       max-width: 50px;
       max-height: 50px;
     }

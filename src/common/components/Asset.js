@@ -7,8 +7,12 @@ import assetModule from '../modules/asset';
 const Asset = ({ asset, expanded, toggleAssetDetails }) => (
   <div className="asset">
     <a href="/todo-asset-page" className="row asset__header" onClick={(e) => toggleAssetDetails(e, asset.id)}>
-      <div className="col"><img className="asset__header__image" alt={asset.title} src={asset.image[0]} /></div>
-      <div className="col-10">{asset.title}</div>
+      <div className="col">
+        <center>
+          <img className="asset__header__image" alt={asset.title} src={asset.image[0]} />
+        </center>
+      </div>
+      <div className="col-11">{asset.title}</div>
       <div className="col"><img className="asset__user-avatar" alt={asset.user.name} src={asset.user.avatar} /></div>
     </a>
     <div className={`asset__details ${(expanded ? '' : 'sr-only')}`}>
