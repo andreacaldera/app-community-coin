@@ -23,7 +23,7 @@ const App = ({ children, searchTerm, setSearchTerm }) => (
             <Link className="nav-link" to="/">Home</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/assets">Assets</a>
+            <Link data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" className="nav-link" to="/assets">Assets</Link>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="/requests">Requests</a>
