@@ -1,11 +1,61 @@
+$break-small: 320px;
+$break-large: 1200px;
+
 body {
-  padding-top: 5rem;
+  padding-top: 10em;
+  font-family: 'Lato', sans-serif;
+}
+
+/**
+  TODO fix mobile mess here
+**/
+
+.navbar {
+  .navbar-brand {
+    font-size: 3em;
+    color: blue;
+
+    @media screen and (min-width: $break-large) {
+      color: green;
+      font-size: 1em;
+    }
+  }
+
+  .navbar-toggler-icon {
+    width: 3.7em;
+    height: 3.7em;
+  }
+
+  .navbar-collapse {
+    font-size: 3em;
+    color: blue;
+
+    @media screen and (min-width: $break-large) {
+      color: green;
+      font-size: 1em;
+    }
+
+    .form-control {
+      font-size: 1em;
+    }
+  }
+}
+
+.main {
+  @media screen and (min-width: $break-large) {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
 }
 
 .asset {
-  color: yellow;
   margin-bottom: 5px;
-  font-size: 15px;
+  font-size: 40px;
+
+  @media screen and (min-width: $break-large) {
+    font-size: 15px;
+  }
+
 
   .asset__user-avatar {
     max-width: 50px;

@@ -41,12 +41,12 @@ const App = ({ children, searchTerm, setSearchTerm }) => (
             <Link className="t-contact-us-link nav-link" to="/contact-us">Contact us</Link>
           </li>
         </ul>
-        <form className="form-inline my-2 my-lg-0">
+        <form className="form-inline my-2 my-lg-0" onSubmit={(e) => e.preventDefault()}>
           <input className="form-control mr-sm-2" type="text" placeholder="Search" value={searchTerm} onChange={setSearchTerm} />
         </form>
       </div>
     </nav>
-    <div className="container">
+    <div className="main">
       {children}
     </div>
   </div>

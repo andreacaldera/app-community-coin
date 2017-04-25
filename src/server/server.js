@@ -26,6 +26,7 @@ const renderFullPage = (content, store) =>
       <head>
         <link rel="stylesheet" type="text/css" href="/dist/communitycoin.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
       <title>Community Coin</title>
       </head>
       <body>
