@@ -5,12 +5,13 @@ import thunk from 'redux-thunk';
 
 import reducer from '../modules';
 import actionMiddleware from '../middleware';
+import meta from '../modules/meta';
 
 const configureStore = (history, initialState) => {
   const middlewares = [
     routerMiddleware(history),
     thunk,
-    process.env.NODE_ENV === 'development' ? createLogger : null,
+    meta.getEnvironment(initialState) === 'development' ? createLogger : null,
     actionMiddleware,
   ];
 

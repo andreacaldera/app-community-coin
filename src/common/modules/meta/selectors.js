@@ -7,6 +7,12 @@ const getFeatureToggles = createSelector(
   ({ featureToggles }) => featureToggles
 );
 
+const getEnvironment = createSelector(
+  getMetaSelector,
+  ({ environment }) => environment
+);
+
 module.exports = {
   getFeatureToggles,
+  getEnvironment,
 };

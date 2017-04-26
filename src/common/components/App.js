@@ -4,11 +4,12 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router';
 
 import search from '../modules/search';
+import nav from '../modules/nav';
 
-const App = ({ children, searchTerm, setSearchTerm }) => (
+const App = ({ children, searchTerm, setSearchTerm, isMenuOpened, toggleMenu }) => (
   <div>
     <nav className="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
-      <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <button className="navbar-toggler navbar-toggler-right" type="button" onClick={toggleMenu}>
         <span className="navbar-toggler-icon" />
       </button>
       <Link className="navbar-brand" to="/">Community Coin</Link>
@@ -17,7 +18,7 @@ const App = ({ children, searchTerm, setSearchTerm }) => (
         <input className="form-control mr-sm-2" type="text" placeholder="Search" value={searchTerm} onChange={setSearchTerm} />
       </form>
 
-      <div className="collapse navbar-collapse" id="navbarsExampleDefault">
+      <div className={`collapse navbar-collapse ${isMenuOpened ? 'show' : 'collapse'}`}>
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
             <Link className="nav-link" to="/">Home</Link>
@@ -26,10 +27,10 @@ const App = ({ children, searchTerm, setSearchTerm }) => (
             <Link data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" className="nav-link" to="/assets">Assets</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/requests">Requests</a>
+            <Link className="nav-link" to="/requests">Requests</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/offers">Offers</a>
+            <Link className="nav-link" to="/offers">Offers</Link>
           </li>
           <li className="nav-item dropdown">
             <a className="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contribute</a>
@@ -59,16 +60,24 @@ const App = ({ children, searchTerm, setSearchTerm }) => (
 App.propTypes = {
   children: PropTypes.shape().isRequired,
   searchTerm: PropTypes.string.isRequired,
+  isMenuOpened: PropTypes.bool.isRequired,
+
   setSearchTerm: PropTypes.func.isRequired,
+  toggleMenu: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
   searchTerm: search.getSearchTerm(state),
+  isMenuOpened: nav.isMenuOpened(state),
 });
 
 const mapDispatchToProps = (dispatch) => ({
   setSearchTerm: (e) => {
     dispatch(search.setSearchTerm(e.target.value));
+  },
+  toggleMenu: (e) => {
+    e.preventDefault();
+    dispatch(nav.toggleMenu());
   },
 });
 

@@ -45,7 +45,10 @@ const getPreloadedState = (req, res, next) => {
     asset.getAssets(req, res, () => {
       res.locals.preloadedState = {
         [NAMESPACE]: {
-          meta: { featureToggles: res.locals.featureToggles },
+          meta: {
+            featureToggles: res.locals.featureToggles,
+            environment: process.env.NODE_ENV || 'production',
+          },
           asset: { all: res.locals.asset.all },
         },
       };
