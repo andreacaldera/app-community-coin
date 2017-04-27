@@ -17,14 +17,14 @@ const app = Express();
 const port = process.env.PORT || 3001;
 
 app.use(cookieParser());
-app.use('/dist', Express.static(path.join(__dirname, '../../dist')));
-app.use('/images', Express.static(path.join(__dirname, '../../images')));
+app.use('/community-coin/dist', Express.static(path.join(__dirname, '../../dist')));
+app.use('/community-coin/images', Express.static(path.join(__dirname, '../../images')));
 
 const renderFullPage = (content, store) =>
   `<!doctype html>
     <html>
       <head>
-        <link rel="stylesheet" type="text/css" href="/dist/communitycoin.css" />
+        <link rel="stylesheet" type="text/css" href="/community-coin/dist/communitycoin.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
       <title>Community Coin</title>
@@ -35,7 +35,7 @@ const renderFullPage = (content, store) =>
         <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-        <script src="/dist/communitycoin.js"></script>
+        <script src="/community-coin/dist/communitycoin.js"></script>
       </body>
     </html>`;
 
