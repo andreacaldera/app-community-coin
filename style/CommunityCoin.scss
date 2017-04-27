@@ -1,114 +1,26 @@
-$break-small: 320px;
-$break-large: 1200px;
+@import "main";
+
+@import "asset";
+@import "nav";
 
 body {
   padding-top: 10em;
   font-family: 'Lato', sans-serif;
 }
 
-/**
-  TODO fix mobile mess here
-**/
-
-.navbar {
-  .navbar-brand {
-    font-size: 3em;
-    color: blue;
-
-    @media screen and (min-width: $break-large) {
-      color: green;
-      font-size: 1em;
-    }
-  }
-
-  .navbar-toggler-icon {
-    width: 3.7em;
-    height: 3.7em;
-  }
-
-  .navbar-collapse {
-    font-size: 3em;
-    color: blue;
-
-    @media screen and (min-width: $break-large) {
-      color: green;
-      font-size: 1em;
-    }
-  }
-
-  .navbar__search-form {
-    display: none;
-
-    @media screen and (min-width: $break-large) {
-      display: block;
-    }
-  }
-  .navbar__search-form-mobile {
-    .form-control {
-      width: 100%;
-      font-size: 2rem;
-    }
-
-
-    @media screen and (min-width: $break-large) {
-      display: none;
-    }
-  }
-}
-
 .main {
   padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  h1, h2, h3, h4, h5 {
+    color: $title;
+  }
 
   @media screen and (min-width: $break-large) {
     padding-top: 0px;
-    padding-left: 10%;
-    padding-right: 10%;
-  }
-}
-
-.asset {
-  margin-bottom: 5px;
-  font-size: 40px;
-
-  @media screen and (min-width: $break-large) {
-    font-size: 15px;
-  }
-
-  .asset__user-avatar {
-    max-width: 50px;
-    max-height: 50px;
-  }
-
-  .asset__header {
-    color: #026756;
-    text-decoration: none;
-    background-color: #3DA594;
-    border: solid 1px #b5b6bc;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
-    padding: 10px;
-
-    .col {
-      padding: 0px;
-    }
-
-    .asset__header__image {
-      vertical-align: middle;
-      height: 100%;
-      max-width: 50px;
-      max-height: 50px;
-    }
-  }
-  .asset__details {
-    padding: 10px;
-    background-color: #67C3B4;
-    color: #026756;
-
-    .asset__details__image {
-      max-width: 500px;
-      max-height: 500px;
-      margin-bottom: 5px;
-    }
+    padding-left: 15%;
+    padding-right: 15%;
+    margin-top: -60px
   }
 }

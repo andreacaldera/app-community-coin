@@ -1,0 +1,56 @@
+@import "main";
+
+.asset {
+  margin-bottom: 5px;
+
+  .asset__thumbnail {
+    max-width: 150px;
+  }
+
+  .asset__user-avatar {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  .asset__header {
+    color: black;
+    text-decoration: none;
+    background-color: $header;
+    border: solid 1px $border;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    padding: 10px;
+
+    .col {
+      padding: 0px;
+    }
+
+    .asset__header__image {
+      vertical-align: middle;
+      height: 100%;
+      max-width: 100px;
+      max-height: 100px;
+    }
+  }
+  .asset__details {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+
+    background-color: $details;
+    color: black;
+
+    border: solid 1px $border;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+
+
+    .asset__details__image {
+      max-width: 500px;
+      max-height: 500px;
+      margin-bottom: 5px;
+    }
+  }
+}

@@ -9,7 +9,9 @@ echo =============================================================
 echo
 echo
 
-yarn start &
+PORT=3003 node src/server/index.js &
+_node_server_pid=$!
+echo $_node_server_pid
 yarn build
 
  _pwd=$(pwd)
@@ -17,11 +19,12 @@ yarn build
 if [[ $_pwd == *app-community-coin ]] ;
 then
   rm -fr static
-  mkdir -p static/community-coin
-  cp -a dist static/community-coin
-  cp -a images static/community-coin
-  curl http://localhost:3002/ -o static/index.html
+  mkdir -p static/communitycoin
+  cp dist/* static/communitycoin
+  cp -a images static/communitycoin
+  curl http://localhost:3003/ -o static/index.html
   ls static
+  kill $_node_server_pid
   if [[ $1 == --start-server ]] ;
   then
     http-server static -p 8082
