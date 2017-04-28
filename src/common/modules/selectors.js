@@ -19,6 +19,11 @@ const getAssetSelector = createSelector(
   ({ asset }) => asset
 );
 
+const getOfferSelector = createSelector(
+  getRootSelector,
+  ({ offer }) => offer
+);
+
 const getNavSelector = createSelector(
   getRootSelector,
   ({ nav }) => nav
@@ -29,5 +34,6 @@ module.exports = {
   getSearchSelector,
   getMetaSelector,
   getAssetSelector,
+  getOfferSelector,
   getNavSelector,
 };

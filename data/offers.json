@@ -1,0 +1,26 @@
+{
+  "1": {
+    "id": "1",
+    "recommended": true,
+    "title": "SOURDOUGH LOAF",
+    "description": "All organic flour and with my special toasted seed mix as well! Delicious and nutritious.",
+    "price": 3,
+    "image": ["/images/offers/sourdough.jpg"],
+    "thumbnail": "/images/offers/sourdough_tn.jpg",
+    "user": {
+      "avatar": "/images/users/carla-octigan_tn.jpg",
+      "name": "Carla Octigan"
+    }
+  },
+  "2": {
+    "id": "2",
+    "title": "SOURDOUGH BREADMAKING COURSE",
+    "description": "Hello lovely friends, this Sunday I am running one of my sourdough courses here in Omega Works. Basically I will work along side you as you make your own sourdough that you will take home and bake the next morning. You will need 4 hours and a few bits and bobs, I have space for 2 more people if anybody is keen. All I ask is a donation for our bat box fund to try and savee the bats of Fish Island. If you're keen let me know.",
+    "image": ["/images/offers/sourdough-course.jpg"],
+    "thumbnail": "/images/offers/sourdough-course_tn.jpg",
+    "user": {
+      "avatar": "/images/users/carla-octigan_tn.jpg",
+      "name": "Carla Octigan"
+    }
+  }
+}
