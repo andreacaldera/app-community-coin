@@ -20,7 +20,7 @@ const Nav = ({ searchTerm, setSearchTerm, isMenuOpened, toggleMenu }) =>
     <div className={`collapse navbar-collapse ${isMenuOpened ? 'show' : 'collapse'}`}>
       <ul className="navbar-nav mr-auto">
         <li className="nav-item">
-          <Link data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" className="nav-link" to="/assets">Assets</Link>
+          <Link data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" className="nav-link t-assets-menu-link" to="/assets">Assets</Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link" to="/requests">Requests</Link>
@@ -43,7 +43,6 @@ const Nav = ({ searchTerm, setSearchTerm, isMenuOpened, toggleMenu }) =>
   </nav>);
 
 Nav.propTypes = {
-  children: PropTypes.shape().isRequired,
   searchTerm: PropTypes.string.isRequired,
   isMenuOpened: PropTypes.bool.isRequired,
 
