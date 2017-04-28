@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
+import { Link } from 'react-router';
 
 import asset from '../modules/asset';
 import search from '../modules/search';
@@ -11,7 +12,7 @@ const Asset = React.createFactory(AssetComponent);
 
 const Recommendations = ({ assets, searchTerm, expanded }) => {
   const noAssetsMessage = _.isEmpty(searchTerm) ?
-    (<p>No assets available yet.</p>) :
+    (<p>No assets recommendations available.</p>) :
     (<p>No assets found using search {searchTerm}.</p>);
 
   const assetElements = _.isEmpty(assets) ?
@@ -20,6 +21,7 @@ const Recommendations = ({ assets, searchTerm, expanded }) => {
   return (
     <div className="t-recommendations">
       <h2>Recommendations</h2>
+      <h3>Assets <Link to="/assets">view more</Link></h3>
       {assetElements}
     </div>
   );

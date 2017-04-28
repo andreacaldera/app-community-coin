@@ -9,7 +9,7 @@ const Asset = ({ asset, expanded, toggleAssetDetails }) => (
     <a href="/assets" className="row asset__header" onClick={(e) => toggleAssetDetails(e, asset.id)}>
       <div className="asset__thumbnail col">
         <center>
-          <img className="asset__header__image" alt={asset.title} src={asset.image[0]} />
+          <img className="asset__header__image" alt={asset.title} src={asset.thumbnail} />
         </center>
       </div>
       <div className="col-9">{asset.title}</div>
