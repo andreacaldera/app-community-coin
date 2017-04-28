@@ -19,9 +19,6 @@ const Nav = ({ searchTerm, setSearchTerm, isMenuOpened, toggleMenu }) =>
 
     <div className={`collapse navbar-collapse ${isMenuOpened ? 'show' : 'collapse'}`}>
       <ul className="navbar-nav mr-auto">
-        <li className="nav-item active">
-          <Link className="nav-link" to="/">Home</Link>
-        </li>
         <li className="nav-item">
           <Link data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" className="nav-link" to="/assets">Assets</Link>
         </li>
@@ -37,12 +34,6 @@ const Nav = ({ searchTerm, setSearchTerm, isMenuOpened, toggleMenu }) =>
             <a className="dropdown-item disabled" href="/add/asset">Add asset</a>
             <a className="dropdown-item disabled" href="/add/request">Request item or service</a>
           </div>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/about">About</Link>
-        </li>
-        <li className="nav-item">
-          <Link className="t-contact-us-link nav-link" to="/contact-us">Contact us</Link>
         </li>
       </ul>
       <form className="navbar__search-form orm-inline my-2 my-lg-0" onSubmit={(e) => e.preventDefault()}>

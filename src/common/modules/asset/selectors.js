@@ -23,8 +23,14 @@ const getList = createSelector(
   }
 );
 
+const getRecommendations = createSelector(
+  getList,
+  (list) => list.filter(({ recommended }) => recommended)
+);
+
 module.exports = {
   getAll,
   getList,
   getExpanded,
+  getRecommendations,
 };
