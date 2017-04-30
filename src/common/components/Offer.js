@@ -7,8 +7,8 @@ import offerModule from '../modules/offer';
 const Offer = ({ offer, expanded, toggleOfferDetails }) => (
   <div className="offer">
     <a href="/offers" className="row offer__header" onClick={(e) => toggleOfferDetails(e, offer.id)}>
-      <div className="col">
-        <center className="offer__thumbnail-container">
+      <div className="col offer__thumbnail-container">
+        <center>
           <img className="offer__thumbnail" alt={offer.title} src={offer.thumbnail} />
         </center>
       </div>

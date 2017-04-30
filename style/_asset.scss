@@ -16,8 +16,16 @@ $thumbnail-size-big: 100px;
       max-width: 60vw;
     }
 
+    .asset__thumbnail-container {
+      max-width: 3.5em;
+      @media screen and (min-width: $break-large) {
+        max-width: 100%;
+      }
+    }
+
     .asset__thumbnail {
-      max-width: 12vw;
+      max-width: 100%;
+      margin-right: 5px;
     }
 
     .asset__header {

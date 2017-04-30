@@ -7,7 +7,7 @@ import assetModule from '../modules/asset';
 const Asset = ({ asset, expanded, toggleAssetDetails }) => (
   <div className="asset">
     <a href="/assets" className="row asset__header" onClick={(e) => toggleAssetDetails(e, asset.id)}>
-      <div className="col">
+      <div className="col asset__thumbnail-container">
         <center>
           <img className="asset__thumbnail" alt={asset.title} src={asset.thumbnail} />
         </center>
