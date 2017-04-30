@@ -5,7 +5,7 @@
     "title": "Garden Spade/shovel: small",
     "description": "This is the smaller size of garden spade/shovel. Bought 2016.",
     "image": ["/images/assets/shovel.jpg"],
-    "thumbnail": "/images/assets/shovel-tn.jpg",
+    "thumbnail": "/images/assets/shovel_tn.jpg",
     "user": {
       "avatar": "/images/users/andrea_tn.jpg",
       "name": "Piers"
@@ -16,7 +16,7 @@
     "title": "Trowel",
     "description": "Garden trowel. Bought 2016.",
     "image": ["/images/assets/trowel.jpg"],
-    "thumbnail": "/images/assets/trowel-tn.jpg",
+    "thumbnail": "/images/assets/trowel_tn.jpg",
     "user": {
       "avatar": "/images/users/andrea_tn.jpg",
       "name": "Piers"
@@ -27,7 +27,7 @@
     "title": "Garden fork",
     "description": "Full sized garden fork. Bought 2015.",
     "image": ["/images/assets/fork.jpg"],
-    "thumbnail": "/images/assets/fork-tn.jpg",
+    "thumbnail": "/images/assets/fork_tn.jpg",
     "user": {
       "avatar": "/images/users/andrea_tn.jpg",
       "name": "Piers"
@@ -38,7 +38,7 @@
     "title": "Spare mac book charger",
     "description": "Spare Apple Macbook Charger OLD STYLE!: check the photo to see if this fits your Macbook.",
     "image": ["/images/assets/mac-charger.jpg"],
-    "thumbnail": "/images/assets/mac-charger-tn.jpg",
+    "thumbnail": "/images/assets/mac-charger_tn.jpg",
     "user": {
       "avatar": "/images/users/andrea_tn.jpg",
       "name": "Piers"
@@ -49,7 +49,7 @@
     "title": "Full set of allen keys",
     "description": "Full set of metric and imperial sized allen keys.",
     "image": ["/images/assets/allen-keys.jpg"],
-    "thumbnail": "/images/assets/allen-keys-tn.jpg",
+    "thumbnail": "/images/assets/allen-keys_tn.jpg",
     "user": {
       "avatar": "/images/users/andrea_tn.jpg",
       "name": "Piers"
@@ -60,7 +60,7 @@
     "title": "Bike pump",
     "description": "Bicycle/football/exercise ball PUMP: joeblow sport pump...NB the head does both types of bike tyre and there are TWO attachments for balls of all sizes. And lilos etc.",
     "image": ["/images/assets/bike-pump1.jpg", "/images/assets/bike-pump2.jpg"],
-    "thumbnail": "/images/assets/bike-pump1-tn.jpg",
+    "thumbnail": "/images/assets/bike-pump1_tn.jpg",
     "user": {
       "avatar": "/images/users/andrea_tn.jpg",
       "name": "Piers"
