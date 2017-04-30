@@ -3,8 +3,17 @@
 .offer {
   margin-bottom: 5px;
 
+  .offer__thumbnail-container {
+    height: 100%
+  }
+
   .offer__thumbnail {
+    vertical-align: middle;
     max-width: 150px;
+  }
+
+  .offer_descruption {
+    margin-left: 10px;
   }
 
   .offer__user-avatar {
@@ -21,6 +30,11 @@
     -moz-border-radius: 6px;
     border-radius: 6px;
     padding: 10px;
+    height: 130px;
+
+    .offer__header__price {
+      text-align: center;
+    }
 
     .col {
       padding: 0px;

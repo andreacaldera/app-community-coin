@@ -8,18 +8,21 @@ const Offer = ({ offer, expanded, toggleOfferDetails }) => (
   <div className="offer">
     <a href="/offers" className="row offer__header" onClick={(e) => toggleOfferDetails(e, offer.id)}>
       <div className="offer__thumbnail col">
-        <center>
+        <center className="offer__thumbnail-container">
           <img className="offer__header__image" alt={offer.title} src={offer.thumbnail} />
         </center>
       </div>
       <div className="col-9">{offer.title}</div>
-      <div className="col offer__thumbnail"><img className="offer__user-avatar" alt={offer.user.name} src={offer.user.avatar} /></div>
+      <div className="col offer__header__price">{offer.price} CC</div>
     </a>
     <div className={`offer__details ${(expanded ? '' : 'sr-only')}`}>
       <div className="row">
-        <div className="col">{offer.description}</div>
         <div className="col">
-          ({offer.image.map((offerImage) => (<img key={offerImage} className="offer__details__image" alt={offer.title} src={offerImage} />))})
+          <span className="offer__thumbnail"><img className="offer__user-avatar" alt={offer.user.name} src={offer.user.avatar} /></span>
+          <span className="offer_descruption">{offer.description}</span>
+        </div>
+        <div className="col">
+          {offer.image.map((offerImage) => <img key={offerImage} className="offer__details__image" alt={offer.title} src={offerImage} />)}
         </div>
       </div>
     </div>

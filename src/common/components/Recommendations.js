@@ -31,10 +31,18 @@ const Recommendations = ({ assets, expandedAssets, offers, expandedOffers, searc
   return (
     <div className="t-recommendations">
       <h2>Recommendations</h2>
-      <h3>Assets <Link to="/assets">view more</Link></h3>
+      <h3>
+        <div className="row">
+          <div className="col">Assets<Link className="view-more" to="/assets">view more</Link></div>
+        </div>
+      </h3>
       {assetElements}
 
-      <h3>Offers <Link to="/offers">view more</Link></h3>
+      <h3>
+        <div className="row">
+          <div className="col">Offers<Link className="view-more" to="/offers">view more</Link></div>
+        </div>
+      </h3>
       {offerElements}
     </div>
   );
