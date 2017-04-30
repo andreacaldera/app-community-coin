@@ -1,15 +1,18 @@
 @import "main";
+@import "devices";
+
+$thumbnail-size-small: 50px;
+$thumbnail-size-big: 100px;
 
 .asset {
   margin-bottom: 5px;
 
-  .asset__thumbnail {
-    max-width: 150px;
+  .asset__title {
+    max-width: 60vw;
   }
 
-  .asset__user-avatar {
-    max-width: 100px;
-    max-height: 100px;
+  .asset__thumbnail {
+    max-width: 12vw;
   }
 
   .asset__header {
@@ -26,12 +29,6 @@
       padding: 0px;
     }
 
-    .asset__header__image {
-      vertical-align: middle;
-      height: 100%;
-      max-width: 100px;
-      max-height: 100px;
-    }
   }
   .asset__details {
     padding: 10px;

@@ -3,22 +3,12 @@
 .offer {
   margin-bottom: 5px;
 
-  .offer__thumbnail-container {
-    height: 100%
+  .offer__title {
+    max-width: 60vw;
   }
 
   .offer__thumbnail {
-    vertical-align: middle;
-    max-width: 150px;
-  }
-
-  .offer_descruption {
-    margin-left: 10px;
-  }
-
-  .offer__user-avatar {
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 12vw;
   }
 
   .offer__header {
@@ -30,7 +20,6 @@
     -moz-border-radius: 6px;
     border-radius: 6px;
     padding: 10px;
-    height: 130px;
 
     .offer__header__price {
       text-align: center;
@@ -60,10 +49,12 @@
     -moz-border-radius: 6px;
     border-radius: 6px;
 
+    .offer__thumbnail {
+      margin-right: 5px;
+    }
 
     .offer__details__image {
-      max-width: 500px;
-      max-height: 500px;
+      max-width: 40vw;
       margin-bottom: 5px;
     }
   }

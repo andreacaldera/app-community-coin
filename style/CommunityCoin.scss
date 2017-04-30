@@ -5,12 +5,11 @@
 @import "nav";
 
 body {
-  padding-top: 10em;
+  padding-top: 5em;
   font-family: 'Lato', sans-serif;
 }
 
 .main {
-  padding-top: 30px;
   padding-left: 30px;
   padding-right: 30px;
 
@@ -19,10 +18,8 @@ body {
   }
 
   @media screen and (min-width: $break-large) {
-    padding-top: 0px;
     padding-left: 15%;
     padding-right: 15%;
-    margin-top: -60px
   }
 
   .view-more {

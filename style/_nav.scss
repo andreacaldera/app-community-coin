@@ -1,23 +1,9 @@
 @import "main";
 
-/**
-  TODO cleanup mobile stuff
-**/
-
 .navbar {
   background-color: $menu-background-color;
 
-  .navbar-brand {
-    font-size: 1.5em;
-  }
-
-  .navbar-toggler-icon {
-    width: 3.7em;
-    height: 3.7em;
-  }
-
   .navbar-collapse {
-    font-size: 1.2em;
     background-color: $menu-background-color;
   }
 
@@ -30,7 +16,6 @@
   }
   .navbar__search-form-mobile {
     .form-control {
-      font-size: 35px;
       width: 100%;
     }
 

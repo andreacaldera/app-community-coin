@@ -25,6 +25,7 @@ const renderFullPage = (content, store) =>
   `<!doctype html>
     <html>
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
         <link rel="stylesheet" type="text/css" href="/communitycoin.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
