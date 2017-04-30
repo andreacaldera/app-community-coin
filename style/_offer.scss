@@ -1,55 +1,66 @@
 @import "main";
 
-.offer {
-  margin-bottom: 5px;
+.offers {
+  h2, h3, a {
+     color: $offer-colour-1;
+   }
 
-  .offer__title {
-    max-width: 60vw;
-  }
+  .offer {
+    margin-bottom: 5px;
 
-  .offer__thumbnail {
-    max-width: 12vw;
-  }
-
-  .offer__header {
-    color: black;
-    text-decoration: none;
-    background-color: $header;
-    border: solid 1px $border;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
-    padding: 10px;
-
-    .offer__header__price {
-      text-align: center;
+    .offer__title {
+      max-width: 60vw;
     }
-
-    .col {
-      padding: 0px;
-    }
-
-  }
-  .offer__details {
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 20px;
-
-    background-color: $details;
-    color: black;
-
-    border: solid 1px $border;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
 
     .offer__thumbnail {
-      margin-right: 5px;
+      max-width: 12vw;
     }
 
-    .offer__details__image {
-      max-width: 40vw;
-      margin-bottom: 5px;
+    .offer__header {
+      color: black;
+      text-decoration: none;
+      background-color: $offer-colour-1;
+      border: solid 1px $offer-colour-4;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      border-radius: 6px;
+      padding: 10px;
+
+      height: 12.5vh;
+      @media screen and (min-width: $break-large) {
+        height: 22vh;
+      }
+
+      .offer__header__price {
+        text-align: center;
+      }
+
+      .col {
+        padding: 0px;
+      }
+
+    }
+    .offer__details {
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 20px;
+
+      background-color: $offer-colour-2;
+      color: black;
+
+      border: solid 1px $border;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      border-radius: 6px;
+
+      .offer__thumbnail {
+        margin-right: 5px;
+      }
+
+      .offer__details__image {
+        max-width: 40vw;
+        margin-bottom: 5px;
+      }
     }
   }
 }

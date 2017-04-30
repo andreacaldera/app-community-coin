@@ -19,7 +19,7 @@ const Offers = ({ offers, expanded, searchTerm }) => {
     noOfferElement :
     (offers.map((_offer) => Offer({ key: _offer.title, offer: _offer, expanded: expanded.includes(_offer.id) })));
   return (
-    <div>
+    <div className="offers">
       <h2>Offers</h2>
       {offerElements}
     </div>

@@ -12,10 +12,7 @@ body {
 .main {
   padding-left: 30px;
   padding-right: 30px;
-
-  h1, h2, h3, h4, h5 {
-    color: $title;
-  }
+  padding-top: 2.5em;
 
   @media screen and (min-width: $break-large) {
     padding-left: 15%;
