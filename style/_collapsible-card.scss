@@ -1,0 +1,63 @@
+@import "main";
+
+$thumbnail-size-small: 50px;
+$thumbnail-size-big: 100px;
+
+.collapsible-card {
+  .collapsible-card__header {
+    padding: 5px;
+    color: black;
+    text-decoration: none;
+    border: solid 1px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    margin-bottom: 5px;
+
+    height: 100px;
+    @media screen and (min-width: $break-large) {
+      height: 120px;
+    }
+
+    .col {
+      max-width: 15vw;
+      padding: 0px;
+    }
+    .col-10 {
+      max-width: 60vw;
+      padding: 5px;
+    }
+    .col-11 {
+      max-width: 70vw;
+      padding: 5px;
+    }
+
+    .collapsible-card__thumbnail {
+      max-height: 100%;
+      max-width: 100%;
+      width: auto;
+      height: auto;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+
+  .collapsible-card__details {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+
+    .collapsible-card__details__image {
+      max-width: 40vw;
+      margin-bottom: 5px;
+    }
+  }
+}

@@ -1,71 +1,21 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import _ from 'lodash';
-import { Link } from 'react-router';
 
-import asset from '../modules/asset';
-import offer from '../modules/offer';
-import search from '../modules/search';
-import AssetComponent from '../components/Asset';
-import OfferComponent from '../components/Offer';
+import AssetsComponent from '../components/Assets';
+import OffersComponent from '../components/Offers';
+import RequestsComponent from '../components/Requests';
 
-const Asset = React.createFactory(AssetComponent);
-const Offer = React.createFactory(OfferComponent);
+const Assets = React.createFactory(AssetsComponent);
+const Offers = React.createFactory(OffersComponent);
+const Requests = React.createFactory(RequestsComponent);
 
-const Recommendations = ({ assets, expandedAssets, offers, expandedOffers, searchTerm }) => {
-  const noAssetsMessage = _.isEmpty(searchTerm) ?
-    (<p>No assets recommendations available.</p>) :
-    (<p>No assets found using search {searchTerm}.</p>);
-  const assetElements = _.isEmpty(assets) ?
-    noAssetsMessage :
-    (assets.map((_asset) => Asset({ key: _asset.title, asset: _asset, expanded: expandedAssets.includes(_asset.id) })));
+const Recommendations = () => (
+  <div className="t-recommendations">
+    <h2>Recommendations</h2>
+    {Assets({ displayRecommendations: true })}
+    {Offers({ displayRecommendations: true })}
+    {Requests({ displayRecommendations: true })}
+  </div>
+);
 
-  const noOffersMessage = _.isEmpty(searchTerm) ?
-    (<p>No offers recommendations available.</p>) :
-    (<p>No offers found using search {searchTerm}.</p>);
-  const offerElements = _.isEmpty(offers) ?
-    noOffersMessage :
-    (offers.map((_offer) => Offer({ key: _offer.title, offer: _offer, expanded: expandedOffers.includes(_offer.id) })));
-
-  return (
-    <div className="t-recommendations">
-      <h2>Recommendations</h2>
-      <div className="assets">
-        <h3>
-          <div className="row">
-            <div className="col">Assets<Link className="view-more" to="/assets">view more</Link></div>
-          </div>
-        </h3>
-        {assetElements}
-      </div>
-
-      <div className="offers">
-        <h3>
-          <div className="row">
-            <div className="col">Offers<Link className="view-more" to="/offers">view more</Link></div>
-          </div>
-        </h3>
-        {offerElements}
-      </div>
-    </div>
-  );
-};
-
-Recommendations.propTypes = {
-  assets: PropTypes.arrayOf(PropTypes.shape()).isRequired,
-  expandedAssets: PropTypes.arrayOf(PropTypes.number).isRequired,
-  offers: PropTypes.arrayOf(PropTypes.shape()).isRequired,
-  expandedOffers: PropTypes.arrayOf(PropTypes.number).isRequired,
-  searchTerm: PropTypes.string.isRequired,
-};
-
-const mapStateToProps = (state) => ({
-  assets: asset.getRecommendations(state),
-  expandedAssets: asset.getExpanded(state),
-  offers: offer.getRecommendations(state),
-  expandedOffers: offer.getExpanded(state),
-  searchTerm: search.getSearchTerm(state),
-});
-
-export default connect(mapStateToProps, null)(Recommendations);
+export default connect(null, null)(Recommendations);

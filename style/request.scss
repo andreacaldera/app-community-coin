@@ -1,0 +1,19 @@
+@import "main";
+
+.requests {
+  h2, h3, a {
+    color: $asset-colour-1;
+  }
+
+  .collapsible-card {
+    .collapsible-card__header {
+      background-color: $request-colour-1;
+      border-color: $request-colour-4;
+    }
+
+    .collapsible-card__details {
+      background-color: $request-colour-2;
+      border-color: $request-colour-4;
+    }
+  }
+}

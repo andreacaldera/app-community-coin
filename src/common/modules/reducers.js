@@ -3,6 +3,7 @@ import { routerReducer } from 'react-router-redux';
 import meta from './meta';
 import asset from './asset';
 import offer from './offer';
+import request from './request';
 import search from './search';
 import nav from './nav';
 
@@ -12,6 +13,7 @@ const rootReducer = combineReducers({
   meta,
   asset,
   offer,
+  request,
   search,
   nav,
 });

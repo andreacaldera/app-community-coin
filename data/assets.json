@@ -6,10 +6,7 @@
     "description": "This is the smaller size of garden spade/shovel. Bought 2016.",
     "image": ["/images/assets/shovel.jpg"],
     "thumbnail": "/images/assets/shovel_tn.jpg",
-    "user": {
-      "avatar": "/images/users/andrea_tn.jpg",
-      "name": "Piers"
-    }
+    "username": "piers.gibbon"
   },
   "2": {
     "id": "2",
@@ -17,10 +14,7 @@
     "description": "Garden trowel. Bought 2016.",
     "image": ["/images/assets/trowel.jpg"],
     "thumbnail": "/images/assets/trowel_tn.jpg",
-    "user": {
-      "avatar": "/images/users/andrea_tn.jpg",
-      "name": "Piers"
-    }
+    "username": "piers.gibbon"
   },
   "3": {
     "id": "3",
@@ -28,10 +22,7 @@
     "description": "Full sized garden fork. Bought 2015.",
     "image": ["/images/assets/fork.jpg"],
     "thumbnail": "/images/assets/fork_tn.jpg",
-    "user": {
-      "avatar": "/images/users/andrea_tn.jpg",
-      "name": "Piers"
-    }
+    "username": "adriaan.pelzer"
   },
   "4": {
     "id": "4",
@@ -39,10 +30,7 @@
     "description": "Spare Apple Macbook Charger OLD STYLE!: check the photo to see if this fits your Macbook.",
     "image": ["/images/assets/mac-charger.jpg"],
     "thumbnail": "/images/assets/mac-charger_tn.jpg",
-    "user": {
-      "avatar": "/images/users/andrea_tn.jpg",
-      "name": "Piers"
-    }
+    "username": "piers.gibbon"
   },
   "5": {
     "id": "5",
@@ -50,10 +38,7 @@
     "description": "Full set of metric and imperial sized allen keys.",
     "image": ["/images/assets/allen-keys.jpg"],
     "thumbnail": "/images/assets/allen-keys_tn.jpg",
-    "user": {
-      "avatar": "/images/users/andrea_tn.jpg",
-      "name": "Piers"
-    }
+    "username": "piers.gibbon"
   },
   "6": {
     "id": "6",
@@ -61,9 +46,6 @@
     "description": "Bicycle/football/exercise ball PUMP: joeblow sport pump...NB the head does both types of bike tyre and there are TWO attachments for balls of all sizes. And lilos etc.",
     "image": ["/images/assets/bike-pump1.jpg", "/images/assets/bike-pump2.jpg"],
     "thumbnail": "/images/assets/bike-pump1_tn.jpg",
-    "user": {
-      "avatar": "/images/users/andrea_tn.jpg",
-      "name": "Piers"
-    }
+    "username": "andrea.caldera"
   }
 }

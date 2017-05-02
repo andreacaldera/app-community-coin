@@ -9,6 +9,7 @@ import { syncHistoryWithStore } from 'react-router-redux';
 
 import featureToggles from './middleware/feature-toggles';
 import asset from './middleware/asset';
+import request from './middleware/request';
 import offer from './middleware/offer';
 import configureStore from '../common/store/configureStore';
 import routes from '../common/routes';
@@ -46,17 +47,20 @@ const getPreloadedState = (req, res, next) => {
   featureToggles(req, res, () =>
     asset.getAssets(req, res, () => {
       offer.getOffers(req, res, () => {
-        res.locals.preloadedState = {
-          [NAMESPACE]: {
-            meta: {
-              featureToggles: res.locals.featureToggles,
-              environment: process.env.NODE_ENV || 'production',
+        request.getRequests(req, res, () => {
+          res.locals.preloadedState = {
+            [NAMESPACE]: {
+              meta: {
+                featureToggles: res.locals.featureToggles,
+                environment: process.env.NODE_ENV || 'production',
+              },
+              asset: { all: res.locals.asset.all },
+              offer: { all: res.locals.offer.all },
+              request: { all: res.locals.request.all },
             },
-            asset: { all: res.locals.asset.all },
-            offer: { all: res.locals.offer.all },
-          },
-        };
-        next();
+          };
+          next();
+        });
       });
     })
   );

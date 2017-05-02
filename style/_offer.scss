@@ -5,65 +5,24 @@
      color: $offer-colour-1;
    }
 
-  .offer {
-    margin-bottom: 5px;
+   .collapsible-card {
+     .collapsible-card__header {
+       background-color: $offer-colour-1;
+       border-color: $offer-colour-4;
+     }
 
-    .offer__title {
-      max-width: 60vw;
-    }
+     .collapsible-card__details {
+       background-color: $offer-colour-2;
+       border-color: $offer-colour-4;
+     }
 
-    .offer__thumbnail-container {
-      max-width: 3.5em;
-      @media screen and (min-width: $break-large) {
-        max-width: 100%;
-      }
-    }
-
-    .offer__thumbnail {
-      max-width: 100%;
-      margin-right: 5px;
-    }
-    .offer__header {
-      color: black;
-      text-decoration: none;
-      background-color: $offer-colour-1;
-      border: solid 1px $offer-colour-4;
-      -webkit-border-radius: 6px;
-      -moz-border-radius: 6px;
-      border-radius: 6px;
-      padding: 10px;
-
-      // height: 12.5vh;
-      // @media screen and (min-width: $break-large) {
-      //   height: 22vh;
-      // }
-
-      .offer__header__price {
-        text-align: center;
-      }
-
-      .col {
-        padding: 0px;
-      }
-
-    }
-    .offer__details {
-      padding: 10px;
-      margin-top: 5px;
-      margin-bottom: 20px;
-
-      background-color: $offer-colour-2;
-      color: black;
-
-      border: solid 1px $border;
-      -webkit-border-radius: 6px;
-      -moz-border-radius: 6px;
-      border-radius: 6px;
-
-      .offer__details__image {
-        max-width: 40vw;
-        margin-bottom: 5px;
-      }
-    }
-  }
+     .offer__header__price { // TODO is there a better way of defining this?
+       text-align: center;
+       padding-top: 5px;
+     }
+     .offer__thumbnail { // TODO is there a better way of defining this?
+       max-width: 100%;
+       margin-right: 5px;
+     }
+   }
 }

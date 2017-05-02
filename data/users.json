@@ -1,0 +1,27 @@
+{
+  "andrea.caldera": {
+    "username": "andrea.caldera",
+    "avatar": "/images/users/andrea_tn.jpg",
+    "name": "Andrea Caldera"
+  },
+  "piers.gibbon": {
+    "username": "piers.gibbon",
+    "avatar": "/images/users/piers_tn.jpg",
+    "name": "Piers Gibbon"
+  },
+  "carla.octigan": {
+    "username": "carla.octigan",
+    "avatar": "/images/users/carla-octigan_tn.jpg",
+    "name": "Carla Octigan"
+  },
+  "franc.strazzeri": {
+    "username": "franc.strazzeri",
+    "avatar": "/images/users/franc-strazzeri_tn.jpg",
+    "name": "Franc strazzeri"
+  },
+  "adriaan.pelzer": {
+    "username": "adriaan.pelzer",
+    "avatar": "/images/users/adriaan-pelzer_tn.jpg",
+    "name": "Adriaan Pelzer"
+  }
+}

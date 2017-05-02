@@ -1,69 +1,19 @@
 @import "main";
-@import "devices";
-
-$thumbnail-size-small: 50px;
-$thumbnail-size-big: 100px;
 
 .assets {
   h2, h3, a {
-    color: $header;
+    color: $asset-colour-1;
   }
 
-  .asset {
-    margin-bottom: 5px;
-
-    .asset__title {
-      max-width: 60vw;
+  .collapsible-card {
+    .collapsible-card__header {
+      background-color: $asset-colour-1;
+      border-color: $asset-colour-2;
     }
 
-    .asset__thumbnail-container {
-      max-width: 3.5em;
-      @media screen and (min-width: $break-large) {
-        max-width: 100%;
-      }
-    }
-
-    .asset__thumbnail {
-      max-width: 100%;
-      margin-right: 5px;
-    }
-
-    .asset__header {
-      color: black;
-      text-decoration: none;
-      background-color: $header;
-      border: solid 1px $border;
-      -webkit-border-radius: 6px;
-      -moz-border-radius: 6px;
-      border-radius: 6px;
-      padding: 10px;
-
-      height: 12.5vh;
-      @media screen and (min-width: $break-large) {
-        height: 22vh;
-      }
-
-      .col {
-        padding: 0px;
-      }
-    }
-    .asset__details {
-      padding: 10px;
-      margin-top: 5px;
-      margin-bottom: 20px;
-
-      background-color: $details;
-      color: black;
-
-      border: solid 1px $border;
-      -webkit-border-radius: 6px;
-      -moz-border-radius: 6px;
-      border-radius: 6px;
-
-      .asset__details__image {
-        max-width: 40vw;
-        margin-bottom: 5px;
-      }
+    .collapsible-card__details {
+      background-color: $asset-colour-3;
+      border-color: $asset-colour-2;
     }
   }
 }

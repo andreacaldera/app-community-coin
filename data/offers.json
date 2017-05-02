@@ -7,10 +7,7 @@
     "price": 3,
     "image": ["/images/offers/sourdough.jpg"],
     "thumbnail": "/images/offers/sourdough_tn.jpg",
-    "user": {
-      "avatar": "/images/users/carla-octigan_tn.jpg",
-      "name": "Carla Octigan"
-    }
+    "username": "carla.octigan"
   },
   "2": {
     "id": "2",
@@ -19,9 +16,6 @@
     "image": ["/images/offers/sourdough-course.jpg"],
     "thumbnail": "/images/offers/sourdough-course_tn.jpg",
     "price": 10,
-    "user": {
-      "avatar": "/images/users/carla-octigan_tn.jpg",
-      "name": "Carla Octigan"
-    }
+    "username": "carla.octigan"
   }
 }
