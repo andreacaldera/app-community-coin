@@ -6,6 +6,7 @@ import Recommendations from './components/Recommendations';
 import Assets from './components/Assets';
 import Requests from './components/Requests';
 import Offers from './components/Offers';
+import Events from './components/Events';
 import NotFound from './components/NotFound';
 
 const routes = (
@@ -14,6 +15,7 @@ const routes = (
     <Route path="assets" component={Assets} />
     <Route path="offers" component={Offers} />
     <Route path="requests" component={Requests} />
+    <Route path="events" component={Events} />
     <Route path="*" component={NotFound} />
   </Route>
 );

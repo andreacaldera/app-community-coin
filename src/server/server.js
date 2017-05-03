@@ -8,9 +8,7 @@ import { createMemoryHistory, match, RouterContext } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 
 import featureToggles from './middleware/feature-toggles';
-import asset from './middleware/asset';
-import request from './middleware/request';
-import offer from './middleware/offer';
+import dataMiddleware from './middleware/data-middleware';
 import configureStore from '../common/store/configureStore';
 import routes from '../common/routes';
 import { NAMESPACE } from '../common/modules/constants';
@@ -45,21 +43,24 @@ const renderFullPage = (content, store) =>
 const getPreloadedState = (req, res, next) => {
   // TODO review this callbacks hell
   featureToggles(req, res, () =>
-    asset.getAssets(req, res, () => {
-      offer.getOffers(req, res, () => {
-        request.getRequests(req, res, () => {
-          res.locals.preloadedState = {
-            [NAMESPACE]: {
-              meta: {
-                featureToggles: res.locals.featureToggles,
-                environment: process.env.NODE_ENV || 'production',
+    dataMiddleware.getAssets(req, res, () => {
+      dataMiddleware.getOffers(req, res, () => {
+        dataMiddleware.getRequests(req, res, () => {
+          dataMiddleware.getEvents(req, res, () => {
+            res.locals.preloadedState = {
+              [NAMESPACE]: {
+                meta: {
+                  featureToggles: res.locals.featureToggles,
+                  environment: process.env.NODE_ENV || 'production',
+                },
+                asset: { all: res.locals.asset.all },
+                offer: { all: res.locals.offer.all },
+                request: { all: res.locals.request.all },
+                event: { all: res.locals.event.all },
               },
-              asset: { all: res.locals.asset.all },
-              offer: { all: res.locals.offer.all },
-              request: { all: res.locals.request.all },
-            },
-          };
-          next();
+            };
+            next();
+          });
         });
       });
     })

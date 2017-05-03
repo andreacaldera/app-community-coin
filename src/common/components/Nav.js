@@ -28,6 +28,9 @@ const Nav = ({ searchTerm, setSearchTerm, isMenuOpened, toggleMenu }) =>
         <li className="nav-item">
           <Link className="nav-link" to="/offers">Offers</Link>
         </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/events">Events</Link>
+        </li>
         <li className="nav-item dropdown">
           <a className="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contribute</a>
           <div className="dropdown-menu" aria-labelledby="dropdown01">

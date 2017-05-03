@@ -29,6 +29,11 @@ const getRequestSelector = createSelector(
   ({ request }) => request
 );
 
+const getEventSelector = createSelector(
+  getRootSelector,
+  ({ event }) => event
+);
+
 const getNavSelector = createSelector(
   getRootSelector,
   ({ nav }) => nav
@@ -41,5 +46,6 @@ module.exports = {
   getAssetSelector,
   getOfferSelector,
   getRequestSelector,
+  getEventSelector,
   getNavSelector,
 };
