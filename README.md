@@ -22,3 +22,12 @@ An attempt at building a resource-sharing network in a block of flats at Omega W
 `docker run -p 3001:3001 app-community-coin-VERSION` 
 
 Make sure to change VERSION and port mapping.
+
+
+## Static
+
+`make build-static`
+
+`make serve-static`
+
+`make deploy`
