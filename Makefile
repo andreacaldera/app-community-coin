@@ -9,7 +9,7 @@ build-static:
 deploy:
 	@echo 'Deploying static web application resources to community-coin...'
 	cp -a $(STATIC_OUTPUT_FOLDER)/* $(LOCAL_DEPLOYMENT_PATH)
-	cd $(STATIC_OUTPUT_FOLDER)
+	cd $(LOCAL_DEPLOYMENT_PATH)
 	git add . && git commit -m 'automatic deployment' && git pull --rebase && git push
 
 build-and-deploy: build-static deploy
