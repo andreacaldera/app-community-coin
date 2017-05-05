@@ -1,3 +1,4 @@
 import { NAMESPACE } from '../constants';
 
 export const TOGGLE_EVENT_DETAILS = `${NAMESPACE}/events/TOGGLE_EVENT_DETAILS`;
+export const TOGGLE_EVENT_RECOMMENDATIONS = `${NAMESPACE}/events/TOGGLE_EVENT_RECOMMENDATIONS`;

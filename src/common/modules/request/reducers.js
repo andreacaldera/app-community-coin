@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import _ from 'lodash';
 
-import { TOGGLE_REQUEST_DETAILS } from './constants';
+import { TOGGLE_REQUEST_DETAILS, TOGGLE_REQUEST_RECOMMENDATIONS } from './constants';
 
 const all = (state = []) => state;
 
@@ -18,7 +18,16 @@ const expanded = (state = [], action) => {
   }
 };
 
+const displayRequestRecommendations = (state = true, action) => {
+  switch (action.type) {
+    case TOGGLE_REQUEST_RECOMMENDATIONS: return !state;
+    default:
+      return state;
+  }
+};
+
 module.exports = combineReducers({
   all,
   expanded,
+  displayRequestRecommendations,
 });

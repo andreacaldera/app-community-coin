@@ -8,6 +8,9 @@ import RequestsComponent from '../components/Requests';
 import EventsComponent from '../components/Events';
 
 import assetModule from '../modules/asset';
+import requestModule from '../modules/request';
+import eventModule from '../modules/event';
+import offerModule from '../modules/offer';
 
 const Assets = React.createFactory(AssetsComponent);
 const Offers = React.createFactory(OffersComponent);
@@ -16,10 +19,13 @@ const Events = React.createFactory(EventsComponent);
 
 const Recommendations = ({
   toggleAssetsFilter,
-  assetRecommenations,
+  displayAssetRecommendations,
   toggleOffersFilter,
+  displayOfferRecommendations,
   toggleRequestsFilter,
+  displayRequestRecommendations,
   toggleEventsFilter,
+  displayEventRecommendations,
 }) => (
   <div className="t-recommendations">
     <h2>Recommendations</h2>
@@ -34,23 +40,29 @@ const Recommendations = ({
       </div>
     </div>
 
-    {assetRecommenations ? Assets({ displayRecommendations: true }) : null}
-    {Offers({ displayRecommendations: true })}
-    {Requests({ displayRecommendations: true })}
-    {Events({ displayRecommendations: true })}
+    {displayAssetRecommendations ? Assets({ displayRecommendations: true }) : null}
+    {displayOfferRecommendations ? Offers({ displayRecommendations: true }) : null}
+    {displayRequestRecommendations ? Requests({ displayRecommendations: true }) : null}
+    {displayEventRecommendations ? Events({ displayRecommendations: true }) : null}
   </div>
 );
 
 Recommendations.propTypes = {
   toggleAssetsFilter: PropTypes.func.isRequired,
-  assetRecommenations: PropTypes.bool.isRequired,
+  displayAssetRecommendations: PropTypes.bool.isRequired,
   toggleOffersFilter: PropTypes.func.isRequired,
+  displayOfferRecommendations: PropTypes.bool.isRequired,
   toggleEventsFilter: PropTypes.func.isRequired,
+  displayEventRecommendations: PropTypes.bool.isRequired,
   toggleRequestsFilter: PropTypes.func.isRequired,
+  displayRequestRecommendations: PropTypes.bool.isRequired,
 };
 
 const mapStateToProps = (state) => ({
-  assetRecommenations: assetModule.getAssetRecommendations(state),
+  displayAssetRecommendations: assetModule.getDisplayAssetRecommendations(state),
+  displayOfferRecommendations: offerModule.getDisplayOfferRecommendations(state),
+  displayEventRecommendations: eventModule.getDisplayEventRecommendations(state),
+  displayRequestRecommendations: requestModule.getDisplayRequestRecommendations(state),
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -60,12 +72,15 @@ const mapDispatchToProps = (dispatch) => ({
   },
   toggleRequestsFilter: (e) => {
     e.preventDefault();
+    dispatch(requestModule.toggleRequestRecommendations());
   },
   toggleEventsFilter: (e) => {
     e.preventDefault();
+    dispatch(eventModule.toggleEventRecommendations());
   },
   toggleOffersFilter: (e) => {
     e.preventDefault();
+    dispatch(offerModule.toggleOfferRecommendations());
   },
 });
 

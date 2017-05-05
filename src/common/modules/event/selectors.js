@@ -23,6 +23,11 @@ const getList = createSelector(
   }
 );
 
+const getDisplayEventRecommendations = createSelector(
+  getEventSelector,
+  ({ displayEventRecommendations }) => displayEventRecommendations
+);
+
 const getRecommendations = createSelector(
   getList,
   (list) => list.filter(({ recommended }) => recommended)
@@ -33,4 +38,5 @@ module.exports = {
   getList,
   getExpanded,
   getRecommendations,
+  getDisplayEventRecommendations,
 };

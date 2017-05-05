@@ -13,10 +13,9 @@ const getExpanded = createSelector(
   ({ expanded }) => expanded
 );
 
-
-const getAssetRecommendations = createSelector(
+const getDisplayAssetRecommendations = createSelector(
   getAssetSelector,
-  ({ assetRecommenations }) => assetRecommenations
+  ({ displayAssetRecommendations }) => displayAssetRecommendations
 );
 
 const getList = createSelector(
@@ -39,5 +38,5 @@ module.exports = {
   getList,
   getExpanded,
   getRecommendations,
-  getAssetRecommendations,
+  getDisplayAssetRecommendations,
 };

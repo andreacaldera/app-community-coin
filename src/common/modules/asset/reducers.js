@@ -18,7 +18,7 @@ const expanded = (state = [], action) => {
   }
 };
 
-const assetRecommenations = (state = true, action) => {
+const displayAssetRecommendations = (state = true, action) => {
   switch (action.type) {
     case TOGGLE_ASSET_RECOMMENDATIONS: return !state;
     default:
@@ -29,5 +29,5 @@ const assetRecommenations = (state = true, action) => {
 module.exports = combineReducers({
   all,
   expanded,
-  assetRecommenations,
+  displayAssetRecommendations,
 });
