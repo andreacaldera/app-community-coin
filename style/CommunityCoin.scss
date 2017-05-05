@@ -17,6 +17,22 @@ body {
     margin-top: 20px;
   }
 
+  .filter {
+    @media screen and (min-width: $break-medium) {
+      max-width: 700px;
+    }
+    .col-lg-6:nth-of-type(2n) {
+      @media screen and (min-width: $break-medium) {
+        margin-left: -30px;
+      }
+    }
+
+    .filter__button {
+      width: 140px;
+      margin-right: 16px;
+    }
+  }
+
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 2.5em;
