@@ -31,12 +31,12 @@ const Recommendations = ({
     <h2>Recommendations</h2>
     <div className="filter row">
       <div className="col-lg-6">
-        <button className="filter__button asset btn btn-primary btn-lg active" role="button" aria-pressed="true" onClick={toggleAssetsFilter}>Assets</button>
-        <button className="filter__button btn btn-primary btn-lg active" role="button" aria-pressed="true" onClick={toggleOffersFilter}>Offers</button>
+        <button className={`filter__button asset btn btn-primary btn-lg ${displayAssetRecommendations ? 'active' : ''}`} role="button" aria-pressed="true" onClick={toggleAssetsFilter}>Assets</button>
+        <button className={`filter__button offer btn btn-primary btn-lg ${displayOfferRecommendations ? 'active' : ''}`} role="button" aria-pressed="true" onClick={toggleOffersFilter}>Offers</button>
       </div>
       <div className="col-lg-6">
-        <button className="filter__button btn btn-primary btn-lg active" role="button" aria-pressed="true" onClick={toggleRequestsFilter}>Requests</button>
-        <button className="filter__button btn btn-primary btn-lg active" role="button" aria-pressed="true" onClick={toggleEventsFilter}>Events</button>
+        <button className={`filter__button request btn btn-primary btn-lg ${displayRequestRecommendations ? 'active' : ''}`} role="button" aria-pressed="true" onClick={toggleRequestsFilter}>Requests</button>
+        <button className={`filter__button event btn btn-primary btn-lg ${displayEventRecommendations ? 'active' : ''}`} role="button" aria-pressed="true" onClick={toggleEventsFilter}>Events</button>
       </div>
     </div>
 

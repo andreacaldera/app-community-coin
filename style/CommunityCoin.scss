@@ -18,6 +18,10 @@ body {
   }
 
   .filter {
+    .filter__button {
+      background-color: grey;
+    }
+
     @media screen and (min-width: $break-medium) {
       max-width: 700px;
     }

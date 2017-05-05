@@ -1,19 +1,25 @@
 @import "main";
 
-.events {
-  h2, h3, a {
-    color: $event-colour-5;
+.main {
+  .filter__button.event.active {
+    background-color: $event-colour-3;
   }
 
-  .collapsible-card {
-    .collapsible-card__header {
-      background-color: $event-colour-1;
-      border-color: $event-colour-4;
+  .events {
+    h2, h3, a {
+      color: $event-colour-5;
     }
 
-    .collapsible-card__details {
-      background-color: $event-colour-2;
-      border-color: $event-colour-4;
+    .collapsible-card {
+      .collapsible-card__header {
+        background-color: $event-colour-1;
+        border-color: $event-colour-4;
+      }
+
+      .collapsible-card__details {
+        background-color: $event-colour-2;
+        border-color: $event-colour-4;
+      }
     }
   }
 }

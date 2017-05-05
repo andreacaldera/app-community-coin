@@ -1,28 +1,34 @@
 @import "main";
 
-.offers {
-  h2, h3, a {
-     color: $offer-colour-1;
-   }
+.main {
+  .filter__button.offer.active {
+    background-color: $offer-colour-3;
+  }
 
-   .collapsible-card {
-     .collapsible-card__header {
-       background-color: $offer-colour-1;
-       border-color: $offer-colour-4;
-     }
-
-     .collapsible-card__details {
-       background-color: $offer-colour-2;
-       border-color: $offer-colour-4;
+  .offers {
+    h2, h3, a {
+       color: $offer-colour-1;
      }
 
-     .offer__header__price { // TODO is there a better way of defining this?
-       text-align: center;
-       padding-top: 5px;
+     .collapsible-card {
+       .collapsible-card__header {
+         background-color: $offer-colour-1;
+         border-color: $offer-colour-4;
+       }
+
+       .collapsible-card__details {
+         background-color: $offer-colour-2;
+         border-color: $offer-colour-4;
+       }
+
+       .offer__header__price { // TODO is there a better way of defining this?
+         text-align: center;
+         padding-top: 5px;
+       }
+       .offer__thumbnail { // TODO is there a better way of defining this?
+         max-width: 100%;
+         margin-right: 5px;
+       }
      }
-     .offer__thumbnail { // TODO is there a better way of defining this?
-       max-width: 100%;
-       margin-right: 5px;
-     }
-   }
+  }
 }

@@ -1,8 +1,8 @@
 @import "main";
 
 .main {
-  .filter__button.asset {
-    background-color: $asset-colour-3;
+  .filter__button.asset.active {
+    background-color: $asset-colour-3 !important;
   }
 
   .assets {
