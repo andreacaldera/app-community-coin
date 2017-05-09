@@ -7,12 +7,12 @@ import requestModule from '../modules/request';
 const Request = ({ request, expanded, toggleRequestDetails }) => (
   <div className="collapsible-card">
     <a href="/requests" className="row collapsible-card__header" onClick={(e) => toggleRequestDetails(e, request.id)}>
-      <div className="col-11">{request.title}</div>
+      <div className="col-11 title">{request.title}</div>
       <div className="col"><img className="collapsible-card__thumbnail" alt={request.user.name} src={request.user.avatar} /></div>
     </a>
     <div className={`collapsible-card__details ${(expanded ? '' : 'sr-only')}`}>
       <div className="row">
-        <div className="col-12">
+        <div className="col-12 col-12 collapsible-card__details__description">
           {request.description}
         </div>
       </div>

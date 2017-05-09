@@ -19,6 +19,10 @@ $thumbnail-size-big: 100px;
       height: 120px;
     }
 
+    .title {
+      word-wrap: break-word;
+    }
+
     .col {
       max-width: 15vw;
       padding: 0px;
@@ -54,6 +58,22 @@ $thumbnail-size-big: 100px;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     border-radius: 6px;
+
+    overflow: auto;
+
+    .collapsible-card__details__avatar {
+      margin-right: 10px;
+      float: left;
+    }
+
+    .collapsible-card__details__description {
+      word-wrap: break-word;
+      vertical-align: top;
+    }
+
+    .collapsible-card__details__image-container {
+      float: right;
+    }
 
     .collapsible-card__details__image {
       max-width: 40vw;

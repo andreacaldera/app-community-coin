@@ -10,19 +10,15 @@ const Offer = ({ offer, expanded, toggleOfferDetails }) => (
       <div className="col">
         <img className="collapsible-card__thumbnail" alt={offer.title} src={offer.thumbnail} />
       </div>
-      <div className="col-10">{offer.title}</div>
+      <div className="col-10 title">{offer.title}</div>
       <div className="col offer__header__price">{offer.price} CC</div>
     </a>
     <div className={`collapsible-card__details ${(expanded ? '' : 'sr-only')}`}>
-      <div className="row">
-        <div className="col">
-          <span><img alt={offer.user.name} src={offer.user.avatar} /></span>
-          <span>{offer.description}</span>
-        </div>
-        <div className="col">
-          {offer.image.map((offerImage) => <img key={offerImage} className="collapsible-card__details__image" alt={offer.title} src={offerImage} />)}
-        </div>
+      <div className="collapsible-card__details__avatar"><img alt={offer.user.name} src={offer.user.avatar} /></div>
+      <div className="collapsible-card__details__image-container">
+        {offer.image.map((offerImage) => <img key={offerImage} className="collapsible-card__details__image" alt={offer.title} src={offerImage} />)}
       </div>
+      <div className="collapsible-card__details__description">{offer.description}</div>
     </div>
   </div>
 );
